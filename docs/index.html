@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- þvingar farsíma vafra til að birta gögn 1:1 og þá virka viðmið (breakpoints) í stílsíðum -->
+	<meta charset="utf-8">
+	<title>Verkefni 4</title>
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+</head> 
+<body>
+    <nav class="topnav">
+    	<input type="checkbox" id="menu">
+    	
+        <ul class="topmenu">
+        	<li><a href="index.html">Sveigjanleg vefhönnun (RWD)</a></li>
+        	<li><a href="myndir.html">Myndnotkun eftir sjástærð</a></li>
+        	<li><a href="https://github.com/OliverMani">Github hjá Óliver Mána</a></li>
+        	<li><a href="http://visir.is">Vísir</a></li>
+        	<li><a href="http://mbl.is">MBL</a></li>
+        </ul>
+        <div class="index">
+        	<label for="menu">&#9776; Efnisyfirlit</label>
+    	</div>
+    </nav>
+	<header>
+		<h1><img src="img/logo.svg" width="100">Sveigjanleg vefhönnun - <i>Responsive Web Design</i> <img src="img/logo.svg" width="100"></h1>
+		<picture>
+			<source srcset="img/stort2.jpg" media="(max-width: 30em)">
+			<source srcset="img/stort1.jpg" media="(max-width: 60em)">
+			<img src="img/stort.jpg">
+		</picture>
+	</header>
+	<section class="content"> 
+		<article class="midja">
+			<h2>Aðaldálkur</h2>
+			<h4><span class="icon-pacman"></span> Í verkefni 1 hafa nemendur kost á því að leysa þetta verkefni með nýja CSS grindakerfinu sem þróað hefur verið undanfarin ár og nú eru framleiðendur helstu vafra internetsins búnir að innleiða þessa lausn í nýjustu vafrana sjá: <a href="https://caniuse.com/"> Can I use </a> nema ennþá þarf forskeyti (<em>e. prefix</em>) á IE og Edge vafrana.<span class="icon-spades"></span>
+			</h4>
+			<p><a href="https://gridbyexample.com/">Grid by Example</a></p>
+			<p><a href="https://tympanus.net/codrops/css_reference/grid/">CSS grid</a></p>
+			<div class="pictures">
+				<img src="img/picture.png">
+				<img src="img/picture2.png">
+				<img src="img/picture3.png">
+				<img src="img/picture4.png">
+			</div>
+			<p><span class="icon-clubs"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod sodales lacus eu tempor. Maecenas eget felis vitae massa pharetra mattis non pellentesque dolor. Suspendisse potenti. Donec lorem risus, hendrerit id est id, efficitur elementum metus. Quisque hendrerit neque non ante interdum euismod. Proin ut nulla pretium, tempor sem at, gravida nisl. Suspendisse potenti. Donec lorem risus, hendrerit id est id, efficitur elementum metus. Quisque hendrerit neque non ante interdum euismod. Proin ut nulla pretium, tempor sem at, gravida nisl.
+			<span class="icon-diamonds"></span></p>
+			<center>
+				<div class="login button">
+					Skrá inn
+				</div>
+			</center>
+		</article>
+		<aside class="vinstri">
+			<h3>Vinstri dálkur</h3>
+			<p><a href="https://www.w3schools.com/html/html_responsive.asp"> What is Responsive Web Design? </a>  Nullam in velit faucibus, sagittis ligula in, tincidunt erat. Ut turpis justo, suscipit vitae commodo ut, luctus non quam.
+			</p>
+			<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</aside>
+		<aside class="haegri">
+			<h3>Auglýsingar...</h3>
+			<!--<p><strong>Litaval er frjálst!</strong> Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p><a href="https://www.uxpin.com/studio/blog/best-practices-examples-of-excellent-responsive-design/">Best practices of responsive web design </a>
+			</p>
+			<p>Ut turpis justo, suscipit vitae commodo ut, luctus non quam.
+			</p>-->
+			<div class="auglysing">
+				<div class="ObjectUpper">
+
+				</div>
+				<div class="Object">
+					<a href="https://olivermani.com">
+						<h2><span class="icon-pacman"></span>Click me<span class="icon-pacman"></span></h2>
+					</a>
+				</div>
+				<div class="ObjectUpper2">
+				</div>
+
+			</div>
+		</aside>
+
+	</section>
+	<footer>
+		<h3>Fótur</h3>
+		<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Cascading Style Sheets </a>  (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+		<div class="boxes">
+			<a href="https://facebook.com" title="Facebook">
+				<div class="box a">
+					A
+				</div>
+			</a>
+			<a href="https://github.com/OliverMani" title="Github">
+				<div class="box b">
+					B
+				</div>
+			</a>
+			<a href="https://instagram.com" title="Instagram">
+				<div class="box c">
+					C
+				</div>
+			</a>
+			<a href="http://visir.is" title="Vísir">
+				<div class="box d">
+					D
+				</div>
+			</a>
+		</div>
+	</footer>
+</body>
+</html>

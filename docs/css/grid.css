@@ -1,0 +1,374 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+/*heimild: https://gridbyexample.com/examples/example13/ */
+/* ====== GRID Area ====== */
+/* ====== GRID Template Areas ===== */
+/* ====== Base litir + padding ====== */
+body {
+  line-height: 1.5em; }
+
+.topnav {
+  display: grid;
+  grid-template-areas: "topmenu" "index";
+  grid-area: topnav;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #999; }
+
+header {
+  grid-area: header;
+  background-color: tomato; }
+
+.content {
+  grid-area: content;
+  background-color: yellow; }
+
+footer {
+  grid-area: footer;
+  background-color: #eee;
+  margin-bottom: 1em;
+  border-left: 1px solid #555;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black; }
+
+.midja {
+  background-color: #eee;
+  border-bottom: 1px solid #aaa;
+  grid-area: midja; }
+
+.vinstri {
+  grid-area: vinstri; }
+
+.haegri {
+  grid-area: haegri; }
+
+.vinstri,
+.haegri {
+  background-color: tomato;
+  color: white; }
+
+header,
+footer,
+.midja,
+.vinstri,
+.haegri {
+  padding: 1em; }
+
+.login {
+  background-color: gold;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  width: 10em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .5s ease;
+  margin: 0;
+  height: 2em; }
+
+.login:hover {
+  border-radius: 10px;
+  width: 20em;
+  background-color: orange;
+  transition: all .7s ease; }
+
+/* ====== leturst├¡lar ====== */
+header h1 {
+  color: #fff;
+  line-height: 1.2;
+  font-weight: normal; }
+
+.midja h2 {
+  margin: .7em 0 .8em 0; }
+
+.midja h4 {
+  text-align: justify;
+  margin: .4em 0; }
+
+.midja p {
+  text-align: justify; }
+
+#menu ~ .topmenu {
+  position: fixed;
+  bottom: -12em;
+  transition: all .3s ease;
+  z-index: 10;
+  width: 100%; }
+
+#menu:checked ~ .topmenu {
+  bottom: 2.7em;
+  transition: all .5s ease; }
+
+.topnav label {
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 1em;
+  bottom: 0; }
+
+#menu {
+  display: none;
+  grid-area: menu; }
+
+/* ========================================
+  Efnisyfirlit
+  ======================================== */
+.index {
+  grid-area: index;
+  text-align: center;
+  background-color: white;
+  z-index: 999;
+  padding: 10px; }
+
+#menu:checked ~ .index {
+  background-color: #999;
+  border: 3px inset #555; }
+
+.topmenu {
+  grid-area: topmenu;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: white;
+  background-color: black;
+  border-color: #00ff00; }
+
+.topmenu li {
+  border: 0;
+  border-bottom: 1px solid lime;
+  padding: 0; }
+
+.topmenu a {
+  display: block;
+  /* ath! */
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: .4em 2em; }
+
+.box {
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  text-align: center; }
+
+.boxes a {
+  color: white;
+  text-decoration: none; }
+
+.a {
+  background-color: gold; }
+
+.b {
+  background-color: red; }
+
+.c {
+  background-color: green; }
+
+.d {
+  background-color: blue; }
+
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  color: white;
+  font-weight: bold; }
+
+/* =======================================
+   Myndvinnsla  
+  ======================================== */
+/*  myndir <img> alltaf ├¡ 100% st├ªr├░ muni├░ a├░ vinna og 
+    ├¥jappa myndir ├¡ photoshop ! */
+body {
+  display: grid;
+  grid-gap: 0;
+  grid-template-areas: "header" "content" "footer" "topnav"; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/*  ========================================
+  Vi├░mi├░ - breakpoints 30em = 480px + 
+  ========================================*/
+@media screen and (min-width: 30em) {
+  /* ├¥a├░ m├í ekki setja slaufusvigann ├¡ n├ªstu l├¡nu, ├¥├í virkar ekki vi├░mi├░i├░ */
+  .pictures img {
+    width: 160px; } }
+/*  ========================================
+  Vi├░mi├░ - breakpoints 37.5em = 600px + 
+  ========================================*/
+@media screen and (min-width: 37.5em) {
+  /* ├¥a├░ m├í ekki setja slaufusvigann ├¡ n├ªstu l├¡nu, ├¥├í virkar ekki vi├░mi├░i├░ */
+  .content {
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas: "haegri  midja" "vinstri midja";
+    grid-template-columns: 1fr 2fr; } }
+/* ========================================
+  Vi├░mi├░ - breakpoints 48em = 760px +
+  ======================================== */
+@media screen and (min-width: 48em) {
+  /* ├¥a├░ m├í ekki setja slaufusvigann ├¡ n├ªstu l├¡nu, ├¥├í virkar ekki vi├░mi├░i├░ */
+  body {
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas: "topnav" "header" "content" "footer"; }
+
+  .topnav {
+    position: relative;
+    border: 0;
+    top: 0; }
+
+  .index {
+    display: none; }
+
+  .topmenu {
+    background-color: white;
+    color: black;
+    border-color: #00ff00;
+    top: 0;
+    position: relative; }
+
+  .topmenu a {
+    color: black; }
+
+  .topmenu li {
+    transition: background .3s; }
+
+  .pictures img {
+    width: 130px; }
+
+  #menu ~ .topmenu {
+    display: flex;
+    flex-flow: row;
+    top: 0;
+    position: relative; }
+
+  #menu:checked ~ .topmenu {
+    display: flex;
+    flex-flow: row;
+    top: 0;
+    position: relative; }
+
+  .topmenu li:hover {
+    background-color: #ddd; }
+
+  .index {
+    top: 0; }
+
+  #menu:checked ~ .index {
+    top: 0; } }
+/* ========================================
+  Vi├░mi├░ - breakpoints 60em = 960px +
+  ======================================== */
+@media screen and (min-width: 60em) {
+  /* ├¥a├░ m├í ekki setja slaufusvigann ├¡ n├ªstu l├¡nu, ├¥├í virkar ekki vi├░mi├░i├░ */
+  body {
+    max-width: 60em;
+    margin: 0 auto; }
+
+  .content {
+    grid-template-areas: "vinstri midja haegri";
+    grid-template-columns: 1fr 3fr 1fr; }
+
+  .box {
+    display: block;
+    width: 5em;
+    height: 5em;
+    line-height: 5em;
+    text-align: center;
+    transition: width .4s ease; }
+
+  .box:hover {
+    width: 7em; }
+
+  .boxes {
+    display: flex;
+    flex-flow: column;
+    width: 5em;
+    color: white;
+    font-weight: bold;
+    left: 0;
+    top: 4em;
+    position: fixed; }
+
+  .box a {
+    width: 5em; } }
+/* ========================================
+  Vi├░mi├░ - breakpoints 80em = 1600px +
+  ======================================== */
+/* Augl├¢singar */
+.auglysing {
+  width: 160px;
+  height: 600px;
+  background-color: black;
+  overflow: hidden;
+  background-image: url(../img/cat2.jfif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover; }
+
+.ObjectUpper {
+  animation: pulse 0.7s infinite;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease;
+  font-size: .7em;
+  background: #ff9900;
+  color: black;
+  width: 50%;
+  background-image: url(../img/trump.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
+
+.ObjectUpper2 {
+  animation: pulseTwo 0.7s infinite;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+  background: #ffee00;
+  color: black;
+  margin-left: 50%;
+  width: 50%;
+  background-image: url(../img/elephant.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.Object {
+  width: 100%;
+  height: 50px;
+  background-color: gold; }
+
+.Object h2 {
+  text-align: center;
+  margin: 0;
+  padding-top: 14px; }
+
+.Object a {
+  color: black;
+  text-decoration: none; }
+
+@keyframes pulse {
+  0% {
+    padding-top: 0; }
+  100% {
+    padding-top: 550px;
+    animation-play-state: paused;
+    background-color: #ffee00; } }
+@keyframes pulseTwo {
+  0% {
+    padding-top: 0; }
+  100% {
+    padding-top: 550px;
+    animation-play-state: paused;
+    background-color: #ff9900; } }
+
+/*# sourceMappingURL=grid.css.map */
