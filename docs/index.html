@@ -7,6 +7,7 @@
 	<title>Verkefni 5</title>
 	<link rel="stylesheet" type="text/css" href="css/all.css">
 	<link rel="stylesheet" type="text/css" href="css/table.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
 </head> 
 <body>
     <nav class="topnav">
@@ -88,6 +89,30 @@
 			    </tr>
 			  </tbody>
 			</table>
+			<fieldset>
+				<legend>HTML form</legend>
+				<form>
+					<label>Nafn</label><br>
+					<input type="text" name="nafn" placeholder="Fullt nafn" autocomplete required><br>
+					<label>Dagsetning</label><br>
+					<input type="date" name="birthday" required><br>
+					<label>Símanúmer</label><br>
+					<input type="text" name="phone" placeholder="Símanúmer" required><br>
+					<label>Tölvupóstur</label><br>
+					<input type="email" name="email-address" placeholder="Email" required><br>
+					<label>Fjöldinn er <select>
+						<option value="0"></option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select> stykki</label><br>
+					<label>Árgerðin er <input type="checkbox" name="argerd" value="1965" id="1965"><label for="1965">1965</label>, <input type="checkbox" name="argerd" value="1985" id="1985"><label for="1985">1985</label></label><br>
+					<label>Litur: </label> <input type="radio" name="litur" value="raudur" id="raudur"><label for="raudur">Rauður</label>, <input type="radio" name="litur" value="svartur" id="svartur"> <label for="svartur">Svartur</label><br>
+					<input type="submit" name="sub" value="Panta">
+				</form>
+			</fieldset>
 		</article>
 		<aside class="vinstri">
 			<h3>Vinstri dálkur</h3>
