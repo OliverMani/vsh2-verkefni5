@@ -89,19 +89,19 @@
 			    </tr>
 			  </tbody>
 			</table>
-			<fieldset>
+			<fieldset class="forms">
 				<legend>HTML form</legend>
 				<form>
 					<label>Nafn</label><br>
-					<input type="text" name="nafn" placeholder="Fullt nafn" autocomplete required><br>
+					<input type="text" name="nafn" placeholder="Fullt nafn" autocomplete required autofocus><br>
 					<label>Dagsetning</label><br>
 					<input type="date" name="birthday" required><br>
 					<label>Símanúmer</label><br>
 					<input type="text" name="phone" placeholder="Símanúmer" required><br>
 					<label>Tölvupóstur</label><br>
 					<input type="email" name="email-address" placeholder="Email" required><br>
-					<label>Fjöldinn er <select>
-						<option value="0"></option>
+					<label>Fjöldinn er <select required>
+						<option value="0" style="display:none;"></option>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -110,6 +110,7 @@
 					</select> stykki</label><br>
 					<label>Árgerðin er <input type="checkbox" name="argerd" value="1965" id="1965"><label for="1965">1965</label>, <input type="checkbox" name="argerd" value="1985" id="1985"><label for="1985">1985</label></label><br>
 					<label>Litur: </label> <input type="radio" name="litur" value="raudur" id="raudur"><label for="raudur">Rauður</label>, <input type="radio" name="litur" value="svartur" id="svartur"> <label for="svartur">Svartur</label><br>
+					<textarea class="comment" placeholder="Athugasemd"></textarea><br>
 					<input type="submit" name="sub" value="Panta">
 				</form>
 			</fieldset>
